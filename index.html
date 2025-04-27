@@ -1,9 +1,64 @@
-echo "<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-    <title>My Homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+        }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            color: var(--dark);
+            background: #f8fafc;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        h1 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #2563eb, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Hzzyx's homepage!</h1>
+    <header>
+        <h1>张三的个人主页</h1>
+        <p>开发者 | 开源爱好者</p>
+    </header>
+
+    <div class="card">
+        <h2>📌 关于我</h2>
+        <p>全栈工程师，擅长 React 和 Node.js，热爱技术分享。</p>
+    </div>
+
+    <div class="card">
+        <h2>🛠️ 项目展示</h2>
+        <ul>
+            <li><a href="#">在线简历生成器</a></li>
+            <li><a href="#">智能天气应用</a></li>
+        </ul>
+    </div>
 </body>
-</html>" > index.html
+</html>
